@@ -1,0 +1,58 @@
+@charset "UTF-8";
+
+* {
+    font-family: '맑은 고딕','Malgun Gothic','돋움',Dotum,Helvetica,AppleGothic,Sans-serif;
+}
+
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, a, button, form, fieldset, p, blockquote {
+    margin: 0;
+    padding: 0;
+}
+
+a, cite, code, dfn, del, em, ins, label, q, span, strong {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+a, button, input[type=button], input[type=submit], input[type=reset] {
+    text-decoration: none;
+}
+
+
+body, dl, dt, dd, th, td, div, p, a, button, table, li {
+    font-size: 12px;
+}
+
+form, fieldset, legend, input, button, textarea, select {
+    font-size: 13px;
+}
+
+body {
+    font-family: '맑은 고딕','Malgun Gothic','돋움',Dotum,Helvetica,AppleGothic,Sans-serif;
+    width: 100%;
+    height: 100%;
+    color: #000;
+}
+
+input, textarea {
+    display: inline-block;
+    font-size: 13px;
+    vertical-align: middle;
+}
+
+a {
+    color: #000;
+}
+
+img {
+    display: inline-block;
+    border: none;
+    vertical-align: top;
+}
+
+img, fieldset {
+    border: none;
+}
+
+
+

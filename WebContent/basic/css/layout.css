@@ -1,0 +1,295 @@
+@charset "UTF-8";
+
+#wrap {
+    width: 100%;
+    min-width: 950px;
+    margin: 0;
+    padding: 0;
+}
+
+body.main #header {
+    padding-left: 0;
+}
+
+#header {
+    position: relative;
+    z-index: 100;
+    width: 950px;
+    margin: 0 auto;
+    height: 154px;
+}
+
+body.intro .snb-padding, body.main .snb-padding {
+    padding-left: 0;
+}
+
+body .snb-padding {
+    padding-left: 53px;
+}
+
+#header:after {
+    display: block;
+    clear: both;
+    content: " ";
+}
+
+#gnb {
+    position: relative;
+    width: 950px;
+    margin: 0 auto;
+    height: 45px;
+    padding-top: 32px;
+    z-index: 11;
+}
+
+#gnb:after {
+    clear: both;
+}
+
+#gnb h1, #gnb ul, #gnb li, #gnb form, #gnb fieldset, #gnb legend, #gnb input, #gnb label, #gnb img {
+    margin: 0;
+    padding: 0;
+}
+
+#gnb h1 {
+    float: left;
+    padding: 0;
+}
+
+#gnb h1 a.woori {
+    display: inline-block;
+    width: 31px;
+    height: 31px;
+}
+
+#gnb h1 a {
+    vertical-align: top;
+    padding: 0;
+    float: left;
+}
+
+#gnb h1 a.site {
+    display: inline-block;
+    margin-left: 4px;
+    margin-top: 3px;
+}
+
+#gnb .my-svc {
+    float: left;
+    height: 31px;
+    margin: 2px 0 0 6px;
+}
+
+#gnb .my-svc dt {
+    position: absolute !important;
+    top: -10000px;
+    left: 0;
+    visibility: hidden;
+    overflow: hidden;
+    width: 0 !important;
+    height: 0;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+#gnb .my-svc dd.btn {
+    margin: 3px 4px 0 0;
+}
+
+#gnb .my-svc dd {
+    float: left;
+    margin: 0 10px 0 0;
+    font-weight: normal;
+    font-size: 11px;
+}
+
+#gnb .my-svc .btn-login {
+    display: inline-block;
+    position: relative;
+}
+
+#gnb .my-svc dd {
+    float: left;
+    margin: 0 10px 0 0;
+    font-weight: normal;
+    font-size: 11px;
+}
+
+.gnb-member-bt {
+    display: inline-block;
+    height: 20px;
+    width: 55px;
+    line-height: 21px;
+    text-align: center;
+    color: #333;
+    letter-spacing: -1px;
+    background: url(/img/common/etc/bg_btn/gnb_member.gif) left top no-repeat;
+    vertical-align: middle;
+    padding: 0;
+    margin: 0;
+}
+
+
+a.gnb-member-bt.js-display-hover-trigger {
+    cursor: default !important;
+    display: inline-block;
+    height: 20px;
+    line-height: 21px;
+    text-align: center;
+    vertical-align: middle;
+    padding: 0;
+    margin: 0;
+}
+
+.gnb-member-bt span {
+    display: inline-block;
+    height: 20px;
+    width: 55px;
+    line-height: 21px;
+    text-align: center;
+    font-size: 12px;
+    white-space: nowrap;
+    vertical-align: middle;
+    font-family: "돋움",dotum,Helvetica,sans-serif;
+    padding: 0;
+    margin: 0;
+    color: #fff;
+}
+
+#gnb .my-svc dd.btn span, #gnb .my-svc dd.timer span {
+    display: inline-block;
+}
+
+a.gnb-member-bt.js-display-hover-trigger {
+    cursor: default !important;
+    display: inline-block;
+    height: 20px;
+    line-height: 21px;
+    text-align: center;
+    vertical-align: middle;
+    padding: 0;
+    margin: 0;
+}
+
+.gnb-member-bt {
+    display: inline-block;
+    height: 20px;
+    width: 55px;
+    line-height: 21px;
+    text-align: center;
+    color: #333;
+    letter-spacing: -1px;
+    background: url(/basic/image/header/gnb_member.gif) left top no-repeat;
+    vertical-align: middle;
+    padding: 0;
+    margin: 0;
+}
+
+#gnb .my-svc .btn-login .select-banking-type {
+    top: 24px;
+    left: -46px;
+    width: 145px;
+}
+
+#gnb .my-svc .select-banking-type {
+    display: none;
+    position: absolute;
+    text-align: center;
+    border: solid 1px #008cdf;
+    background: #fff;
+    width: 109px;
+    height: 30px;
+    line-height: 32px;
+    font-size: 11px;
+    color: #ececec;
+    left: -17px;
+    top: 24px;
+}
+
+#gnb .my-svc dd {
+    float: left;
+    margin: 0 10px 0 0;
+    font-weight: normal;
+    font-size: 11px;
+}
+
+
+#gnb .my-svc .select-banking-type a {
+    background: none;
+    padding: 0 !important;
+    font-size: 14px !important;
+    font-weight: bold;
+    line-height: 14px;
+    height: 14px;
+    color: #000 !important;
+    margin: 10px 0 0 0 !important;
+}
+
+#gnb .my-svc .btn-login .select-banking-type-arrow {
+    top: 14px;
+    left: -46px;
+    height: 11px;
+    width: 147px;
+    display: none;
+}
+
+#gnb .my-svc .select-banking-type-arrow {
+    display: none;
+    position: absolute;
+    width: 111px;
+    height: 11px;
+    background: url(/image/header/common.gif) no-repeat center 4px;
+    left: -17px;
+    top: 14px;
+}
+
+#gnb .my-svc dd {
+    float: left;
+    margin: 0 10px 0 0;
+    font-weight: normal;
+    font-size: 11px;
+}
+
+#gnb .my-svc dd.txt {
+    margin: 2px 0 0 0;
+}
+
+.chrome #gnb .my-svc dd.txt, .safari #gnb .my-svc dd.txt {
+    margin: 1px 0 0 0;
+}
+
+#gnb .my-svc .btn-certificate-center {
+    display: inline-block;
+    position: relative;
+}
+
+#gnb .my-svc dd.txt a {
+    font-family: "돋움",dotum,Helvetica,sans-serif;
+    font-size: 12px;
+    letter-spacing: -1px;
+    padding: 0 0 0 0px;
+    margin: 5px 0 0 0;
+}
+
+#gnb .my-svc dd.txt a.js-display-hover-trigger {
+    cursor: default !important;
+}
+
+#gnb .my-svc .btn-certificate-center a.js-display-hover-trigger {
+    text-decoration: none;
+    margin: 1px 0 0 0;
+}
+
+#gnb .my-svc dd.txt .select-banking-type a {
+    font-family: '맑은 고딕','Malgun Gothic','돋움',Dotum,Helvetica,AppleGothic,Sans-serif !important;
+    margin: 0 3px;
+}
+
+
+
+
+
+
+
+
+
