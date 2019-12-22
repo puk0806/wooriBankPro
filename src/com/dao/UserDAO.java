@@ -4,11 +4,30 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 import com.model.UserDTO;
 import com.util.JdbcUtil;
 
+import search.accountsearch.dao.SearchDAO;
+
 public class UserDAO {
+	
+
+	private static UserDAO userDao = null;
+
+	private UserDAO() {
+	}
+
+	public static UserDAO getInstance() {
+		if (userDao == null) {
+			userDao = new UserDAO();
+		}
+		return userDao;
+	}
+	
+	
 	
 	// 유저 코드로 유저 얻기
 	public UserDTO selectById(Connection conn,String user_id ) {
@@ -51,6 +70,61 @@ public class UserDAO {
 			JdbcUtil.close(pstmt);
 		}
 		return userdto;
+	}
+
+	// 모든 유저 가져오기
+	public List<UserDTO> selectAll(Connection conn) {
+		
+		String sql = "select * from u_info ";
+		PreparedStatement pstmt = null;
+		ResultSet rs= null;
+		
+		ArrayList<UserDTO> list = new ArrayList<UserDTO>();
+		UserDTO userDto = null;
+		UserDAO userDao = UserDAO.getInstance();
+		
+		try {
+			pstmt = conn.prepareStatement(sql);
+			rs = pstmt.executeQuery();
+			while(rs.next()) {
+				userDto = userDao.selectById(conn, rs.getString("user_id"));
+				list.add(userDto);
+			}
+		} catch (SQLException e) {
+			System.out.println("UserDAO slectAll 예외");
+			e.printStackTrace();
+		}finally {
+			JdbcUtil.close(rs);
+			JdbcUtil.close(pstmt);
+		}
+		return list;
+	}
+	
+	// 이름, 주민번호로 유저 정보 가져오기
+	public UserDTO selectByName_ByRrn(Connection conn,String user_name,String user_rrn ) {
+		String sql = "select * " + 
+				"from u_info " + 
+				"where user_name = ? and user_rrn= ? ";
+		PreparedStatement pstmt = null;
+		ResultSet rs= null;
+		
+		UserDTO userDto = null;
+		try {
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, user_name);
+			pstmt.setString(2, user_rrn);
+			rs = pstmt.executeQuery();
+			
+			if(rs.next()) {
+				userDto = userDao.getInstance().selectById(conn, rs.getString("user_id"));
+			}
+			
+		} catch (SQLException e) {
+			System.out.println("UserDAO selectByNameByRrn 예외");
+			e.printStackTrace();
+		}
+		
+		return userDto;
 	}
 	
 	

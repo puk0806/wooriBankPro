@@ -38,8 +38,8 @@ public class SearchDAO {
 		ResultSet rs_yd = null;
 		ResultSet rs_re = null;
 		
-		UserDTO userDto = new UserDAO().selectById(conn, user_id);
-		ArrayList<AccountDTO> accountDTOList = (ArrayList<AccountDTO>) new AccountDAO().selectById_ByType(conn,userDto.getU_info_no(), "AT1000");
+		UserDTO userDto = UserDAO.getInstance().selectById(conn, user_id);
+		ArrayList<AccountDTO> accountDTOList = (ArrayList<AccountDTO>) AccountDAO.getInstance().selectById_ByType(conn,userDto.getU_info_no(), "AT1000");
 		ArrayList<SearchDTO> list = new ArrayList<SearchDTO>();
 		AccountDTO accountDto = null;
 		A_detailDTO a_detailDto = null;
@@ -57,7 +57,7 @@ public class SearchDAO {
 				dto.setL_bank_no(accountDto.getL_bank_no());
 				dto.setAccount_create_date(accountDto.getAccount_create_date());
 
-				a_detailDto = new A_detailDAO().selectByNo(conn, dto.getAccount_no());
+				a_detailDto = A_detailDAO.getInstance().selectByNo(conn, dto.getAccount_no());
 				dto.setAccount_trans_date(a_detailDto.getAccount_trans_date());
 				dto.setAccount_current_money(a_detailDto.getAccount_current_money());
 

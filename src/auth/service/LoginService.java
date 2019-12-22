@@ -11,7 +11,7 @@ import com.util.ConnectionProvider;
 
 public class LoginService {
 	
-	private UserDAO userDao = new UserDAO();
+	private UserDAO userDao = UserDAO.getInstance();
 
 	public UserDTO login(String user_id, String user_pwd) {
 		System.out.println("login service login입장");

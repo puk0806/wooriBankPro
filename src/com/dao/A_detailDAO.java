@@ -10,6 +10,19 @@ import com.model.UserDTO;
 import com.util.JdbcUtil;
 
 public class A_detailDAO {
+	
+	private static A_detailDAO a_detailDao = null;
+	
+	private A_detailDAO() {
+	}
+
+	public static A_detailDAO getInstance() {
+		if (a_detailDao == null) {
+			a_detailDao = new A_detailDAO();
+		}
+		return a_detailDao;
+	}
+	
 
 	public A_detailDTO selectByNo(Connection conn,String account_no ) {
 		System.out.println("account no : "+account_no);

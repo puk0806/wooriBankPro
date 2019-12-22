@@ -14,7 +14,7 @@
 		아이디:<br/><input type="text" name="user_id" value="admin">
 	</p>
 	<p>
-		암호:<br/><input type="user_pwd" name="user_pwd" value="1234">
+		암호:<br/><input type="password" name="user_pwd" value="1234">
 	</p>
 	<input type="submit" value="로그인">
 	</form>
