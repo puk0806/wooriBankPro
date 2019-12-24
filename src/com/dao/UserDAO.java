@@ -87,7 +87,9 @@ public class UserDAO {
 			pstmt = conn.prepareStatement(sql);
 			rs = pstmt.executeQuery();
 			while(rs.next()) {
+				
 				userDto = userDao.selectById(conn, rs.getString("user_id"));
+				
 				list.add(userDto);
 			}
 		} catch (SQLException e) {
@@ -116,7 +118,23 @@ public class UserDAO {
 			rs = pstmt.executeQuery();
 			
 			if(rs.next()) {
-				userDto = userDao.getInstance().selectById(conn, rs.getString("user_id"));
+				userDto = new UserDTO(rs.getString("u_info_no")
+						,rs.getString("s_addr_no")
+						,rs.getString("c_grade_no")
+						,rs.getString("u_grade_no")
+						,rs.getString("country_no")
+						,rs.getString("work_no")
+						,rs.getString("user_name")
+						,rs.getString("user_rrn")
+						,rs.getString("user_phone")
+						,rs.getString("user_email")
+						,rs.getString("user_id")
+						,rs.getString("user_pwd")
+						,rs.getString("user_addr")
+						,rs.getDate("user_sign_date")
+						,rs.getInt("user_receive_sms")
+						,rs.getInt("user_receive_email")
+						,rs.getInt("user_receive_phone"));
 			}
 			
 		} catch (SQLException e) {

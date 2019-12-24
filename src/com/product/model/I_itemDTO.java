@@ -17,6 +17,22 @@ public class I_itemDTO {
 	String insurance_item_commnet; 	// 상품설명
 	String insurance_item_name; 	// 보험상품명
 	int insurance_item_length; 		// 보험기간	
+	
+	public I_itemDTO() {
+		// TODO Auto-generated constructor stub
+	}
+	
+	public I_itemDTO(String i_item_no, String i_company_no, String insurance_item_commnet, String insurance_item_name,
+			int insurance_item_length) {
+		super();
+		this.i_item_no = i_item_no;
+		this.i_company_no = i_company_no;
+		this.insurance_item_commnet = insurance_item_commnet;
+		this.insurance_item_name = insurance_item_name;
+		this.insurance_item_length = insurance_item_length;
+	}
+
+
 	public String getI_item_no() {
 		return i_item_no;
 	}

@@ -31,6 +31,30 @@ public class Y_signDTO {
 	String sb_type_no; 			// 스마트징검다리론신청코드
 	String ses_type_no; 		// SNS만기알림유형코드
 	String interest_pay_method; // 이자지급방법 
+	
+	public Y_signDTO() {
+	}
+	
+	
+	public Y_signDTO(String yegeum_no, String u_info_no, String account_no, String y_item_no, String i_type_no,
+			String ps_type_no, String t_type_no, String et_type_no, String employee_no, String sb_type_no,
+			String ses_type_no, String interest_pay_method) {
+		this.yegeum_no = yegeum_no;
+		this.u_info_no = u_info_no;
+		this.account_no = account_no;
+		this.y_item_no = y_item_no;
+		this.i_type_no = i_type_no;
+		this.ps_type_no = ps_type_no;
+		this.t_type_no = t_type_no;
+		this.et_type_no = et_type_no;
+		this.employee_no = employee_no;
+		this.sb_type_no = sb_type_no;
+		this.ses_type_no = ses_type_no;
+		this.interest_pay_method = interest_pay_method;
+	}
+
+
+
 	public String getYegeum_no() {
 		return yegeum_no;
 	}

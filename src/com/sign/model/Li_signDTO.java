@@ -21,6 +21,24 @@ public class Li_signDTO {
 	String i_type_no; // 상품유형코드
 	String ps_type_no; // 상품상태코드
 	int loan_item_sign_money; // 대출금액
+	
+	public Li_signDTO() {
+		// TODO Auto-generated constructor stub
+	}
+	
+	public Li_signDTO(String li_sign_no, String u_info_no, String account_no, String l_item_no, String i_type_no,
+			String ps_type_no, int loan_item_sign_money) {
+		this.li_sign_no = li_sign_no;
+		this.u_info_no = u_info_no;
+		this.account_no = account_no;
+		this.l_item_no = l_item_no;
+		this.i_type_no = i_type_no;
+		this.ps_type_no = ps_type_no;
+		this.loan_item_sign_money = loan_item_sign_money;
+	}
+
+
+
 	public String getLi_sign_no() {
 		return li_sign_no;
 	}

@@ -15,7 +15,19 @@ public class Ls_detailDTO {
 	String li_sign_no; // 대출상품가입코드
 	String account_no; // 계좌코드
 	String l_bank_no; // 지점코드
+	public Ls_detailDTO() {
+		// TODO Auto-generated constructor stub
+	}
 	
+	public Ls_detailDTO(String ls_detail_no, String li_sign_no, String account_no, String l_bank_no) {
+		super();
+		this.ls_detail_no = ls_detail_no;
+		this.li_sign_no = li_sign_no;
+		this.account_no = account_no;
+		this.l_bank_no = l_bank_no;
+	}
+
+
 	public String getLs_detail_no() {
 		return ls_detail_no;
 	}

@@ -24,9 +24,29 @@ public class S_itemDTO {
 	int saving_item_cancelrate; 	// 중도해지금리
 	String savings_item_length; 	// 적금기간
 	String savings_item_comment; 	// 상품설명
+	
+	public S_itemDTO() {
+		// TODO Auto-generated constructor stub
+	}
+	
 	public String getS_item_no() {
 		return s_item_no;
+	}public S_itemDTO(String s_item_no, String st_type_no, String saving_item_name, int saving_item_maxmoney,
+			int saving_item_endrate, int saving_item_cancelrate, String savings_item_length,
+			String savings_item_comment) {
+		super();
+		this.s_item_no = s_item_no;
+		this.st_type_no = st_type_no;
+		this.saving_item_name = saving_item_name;
+		this.saving_item_maxmoney = saving_item_maxmoney;
+		this.saving_item_endrate = saving_item_endrate;
+		this.saving_item_cancelrate = saving_item_cancelrate;
+		this.savings_item_length = savings_item_length;
+		this.savings_item_comment = savings_item_comment;
 	}
+
+
+
 	public void setS_item_no(String s_item_no) {
 		this.s_item_no = s_item_no;
 	}

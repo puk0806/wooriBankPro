@@ -19,6 +19,23 @@ public class Si_signDTO {
 	String account_no; // 계좌코드
 	String i_type_no; // 상품유형코드
 	String ps_type_no; // 상품상태코드
+	
+	public Si_signDTO() {
+		// TODO Auto-generated constructor stub
+	}
+	
+	public Si_signDTO(String si_sign_no, String s_item_no, String u_info_no, String account_no, String i_type_no,
+			String ps_type_no) {
+		this.si_sign_no = si_sign_no;
+		this.s_item_no = s_item_no;
+		this.u_info_no = u_info_no;
+		this.account_no = account_no;
+		this.i_type_no = i_type_no;
+		this.ps_type_no = ps_type_no;
+	}
+
+
+
 	public String getSi_sign_no() {
 		return si_sign_no;
 	}

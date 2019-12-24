@@ -22,6 +22,23 @@ public class Gs_detailDTO {
 	double gold_traderate; // 골드거래량
 	double gold_extra; // 잔여골드
 	
+	public Gs_detailDTO() {
+		// TODO Auto-generated constructor stub
+	}
+	
+	public Gs_detailDTO(String gs_detail_no, String gi_sign_no, String g_price_no, String account_no, String l_bank_no,
+			double gold_traderate, double gold_extra) {
+		super();
+		this.gs_detail_no = gs_detail_no;
+		this.gi_sign_no = gi_sign_no;
+		this.g_price_no = g_price_no;
+		this.account_no = account_no;
+		this.l_bank_no = l_bank_no;
+		this.gold_traderate = gold_traderate;
+		this.gold_extra = gold_extra;
+	}
+
+
 	public String getGs_detail_no() {
 		return gs_detail_no;
 	}

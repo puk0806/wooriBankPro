@@ -29,6 +29,29 @@ public class Ii_signDTO {
 	Date insurence_sign_date; // 계약일자
 	int insurance_length; // 계약기간
 	int insurance_cycle; // 납입주기	
+	
+	public Ii_signDTO() {
+		// TODO Auto-generated constructor stub
+	}
+	
+	public Ii_signDTO(String ii_sign_no, String u_info_no, String account_no, String i_item_no, String i_type_no,
+			String ps_type_no, String stock_number, Date insurence_sign_date, int insurance_length,
+			int insurance_cycle) {
+		this.ii_sign_no = ii_sign_no;
+		this.u_info_no = u_info_no;
+		this.account_no = account_no;
+		this.i_item_no = i_item_no;
+		this.i_type_no = i_type_no;
+		this.ps_type_no = ps_type_no;
+		this.stock_number = stock_number;
+		this.insurence_sign_date = insurence_sign_date;
+		this.insurance_length = insurance_length;
+		this.insurance_cycle = insurance_cycle;
+	}
+
+
+
+
 	public String getIi_sign_no() {
 		return ii_sign_no;
 	}

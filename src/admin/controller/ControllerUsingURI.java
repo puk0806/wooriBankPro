@@ -81,6 +81,7 @@ public class ControllerUsingURI extends HttpServlet{
         	String prefix = "/WEB-INF/adminview";
         	String suffix = ".jsp";
         	viewPage = prefix+viewPage+suffix;
+        	System.out.println("포워딩 URL :"+viewPage);
         	//System.out.println("viewPage:"+viewPage);
            RequestDispatcher dispatcher = request.getRequestDispatcher(viewPage);
            dispatcher.forward(request, response);

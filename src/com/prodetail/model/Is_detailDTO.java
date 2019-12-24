@@ -20,6 +20,23 @@ public class Is_detailDTO {
 	String l_bank_no; // 지점코드
 	int insurance_principal; // 보험원금
 	int insurance_payment; // 보험납입액
+	
+	public Is_detailDTO() {
+		// TODO Auto-generated constructor stub
+	}
+	
+	public Is_detailDTO(String is_detail_no, String ii_sign_no, String account_no, String l_bank_no,
+			int insurance_principal, int insurance_payment) {
+		super();
+		this.is_detail_no = is_detail_no;
+		this.ii_sign_no = ii_sign_no;
+		this.account_no = account_no;
+		this.l_bank_no = l_bank_no;
+		this.insurance_principal = insurance_principal;
+		this.insurance_payment = insurance_payment;
+	}
+
+
 	public String getIs_detail_no() {
 		return is_detail_no;
 	}

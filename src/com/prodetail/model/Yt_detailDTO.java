@@ -23,7 +23,26 @@ public class Yt_detailDTO {
 	int p_set_no; // 질권설정코드
 	String remarks_no; // 특기사항코드
 	int yegeum_item_endday; // 만기일
-	int yegeum_tiem_transmoney; // 거래금액	
+	int yegeum_tiem_transmoney; // 거래금액
+	
+	public Yt_detailDTO() {
+		// TODO Auto-generated constructor stub
+	}
+	
+	public Yt_detailDTO(String yt_detail_no, String yegeum_no, String account_no, String l_bank_no, int p_set_no,
+			String remarks_no, int yegeum_item_endday, int yegeum_tiem_transmoney) {
+		super();
+		this.yt_detail_no = yt_detail_no;
+		this.yegeum_no = yegeum_no;
+		this.account_no = account_no;
+		this.l_bank_no = l_bank_no;
+		this.p_set_no = p_set_no;
+		this.remarks_no = remarks_no;
+		this.yegeum_item_endday = yegeum_item_endday;
+		this.yegeum_tiem_transmoney = yegeum_tiem_transmoney;
+	}
+
+
 	public String getYt_detail_no() {
 		return yt_detail_no;
 	}

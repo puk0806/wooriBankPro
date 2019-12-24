@@ -16,6 +16,23 @@ public class L_itemDTO {
 	String loan_item_comment;// 상품설명
 	String loan_item_length; // 대출기간
 	int loan_item_limitmoney;// 대출한도
+	
+	public L_itemDTO() {
+		// TODO Auto-generated constructor stub
+	}
+	
+	
+	public L_itemDTO(String l_item_no, String li_type_no, String loan_item_comment, String loan_item_length,
+			int loan_item_limitmoney) {
+		this.l_item_no = l_item_no;
+		this.li_type_no = li_type_no;
+		this.loan_item_comment = loan_item_comment;
+		this.loan_item_length = loan_item_length;
+		this.loan_item_limitmoney = loan_item_limitmoney;
+	}
+
+
+
 	public String getL_item_no() {
 		return l_item_no;
 	}

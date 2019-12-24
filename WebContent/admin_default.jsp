@@ -14,7 +14,7 @@
 	<ol>
 	   <li><a href="/bankJSPProject/usermenu.admin">유저(전유저조회,특정유저조회)</a></li>
 	   <li><a href="/bankJSPProject/account.admin">계좌(모든계좌,계좌검색,회원계좌검색,계좌해지)</a></li>
-	   <li><a href="#">상품(7개분류후-상품조회,상품등록,상품해지)</a></li>
+	   <li><a href="/bankJSPProject/product.admin">상품(7개분류후-상품조회,상품등록,상품해지)</a></li>
 	</ol>
 </div>
 

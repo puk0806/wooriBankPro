@@ -22,7 +22,23 @@ public class Foi_signDTO {
 	String i_type_no; // 상품유형코드
 	String ps_type_no; // 상품상태코드
 	String currency_no; // 통화코드
+	
+	public Foi_signDTO() {
+	}
 	   
+	public Foi_signDTO(String foi_sign_no, String u_info_no, String account_no, String fo_item_no, String i_type_no,
+			String ps_type_no, String currency_no) {
+		this.foi_sign_no = foi_sign_no;
+		this.u_info_no = u_info_no;
+		this.account_no = account_no;
+		this.fo_item_no = fo_item_no;
+		this.i_type_no = i_type_no;
+		this.ps_type_no = ps_type_no;
+		this.currency_no = currency_no;
+	}
+
+
+
 	public String getFoi_sign_no() {
 		return foi_sign_no;
 	}

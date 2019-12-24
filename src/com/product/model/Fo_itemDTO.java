@@ -14,6 +14,23 @@ public class Fo_itemDTO {
 	double foreign_item_sign_money; 	// 가입금액
 	String foreign_item_comment; 	// 상품설명
 	String foreign_item_endday; 	// 만기기간	
+	
+	public Fo_itemDTO() {
+		// TODO Auto-generated constructor stub
+	}
+	
+	
+	
+	public Fo_itemDTO(String fo_item_no, double foreign_item_sign_money, String foreign_item_comment,
+			String foreign_item_endday) {
+		this.fo_item_no = fo_item_no;
+		this.foreign_item_sign_money = foreign_item_sign_money;
+		this.foreign_item_comment = foreign_item_comment;
+		this.foreign_item_endday = foreign_item_endday;
+	}
+
+
+
 	public String getFo_item_no() {
 		return fo_item_no;
 	}

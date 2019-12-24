@@ -21,6 +21,25 @@ public class Fui_signDTO {
 	String i_type_no; // 상품유형코드
 	String ps_type_no; // 상품상태코드
 	String payment_no; // 납입방법코드
+	
+	public Fui_signDTO() {
+		// TODO Auto-generated constructor stub
+	}
+	
+	public Fui_signDTO(String fui_sign_no, String u_info_no, String account_no, String fu_item_no, String i_type_no,
+			String ps_type_no, String payment_no) {
+		this.fui_sign_no = fui_sign_no;
+		this.u_info_no = u_info_no;
+		this.account_no = account_no;
+		this.fu_item_no = fu_item_no;
+		this.i_type_no = i_type_no;
+		this.ps_type_no = ps_type_no;
+		this.payment_no = payment_no;
+	}
+
+
+
+
 	public String getFui_sign_no() {
 		return fui_sign_no;
 	}

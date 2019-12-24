@@ -17,6 +17,7 @@ public class Fus_detailDTO {
 	);
 	*/
 	
+	
 	String fus_detail_no; // NO
 	String fui_sign_no; // 펀드상품가입코드
 	String account_no; // 계좌코드
@@ -26,6 +27,27 @@ public class Fus_detailDTO {
 	double investment_profit; // 투자수익률
 	int account_balance; // 잔고좌수
 	String trust_company; // 위탁회사명
+	
+	public Fus_detailDTO() {
+		// TODO Auto-generated constructor stub
+	}
+	
+	public Fus_detailDTO(String fus_detail_no, String fui_sign_no, String account_no, String l_bank_no,
+			int fund_item_sign_money, int standard_price, double investment_profit, int account_balance,
+			String trust_company) {
+		super();
+		this.fus_detail_no = fus_detail_no;
+		this.fui_sign_no = fui_sign_no;
+		this.account_no = account_no;
+		this.l_bank_no = l_bank_no;
+		this.fund_item_sign_money = fund_item_sign_money;
+		this.standard_price = standard_price;
+		this.investment_profit = investment_profit;
+		this.account_balance = account_balance;
+		this.trust_company = trust_company;
+	}
+
+
 	public String getFus_detail_no() {
 		return fus_detail_no;
 	}

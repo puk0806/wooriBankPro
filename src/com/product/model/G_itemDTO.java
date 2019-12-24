@@ -13,6 +13,19 @@ public class G_itemDTO {
 	String g_item_no; 			// 골드상품코드
 	String gold_item_comment; 	// 상품설명
 	double gold_item_transunit; // 거래단위	
+	
+	public G_itemDTO() {
+		// TODO Auto-generated constructor stub
+	}
+	
+	public G_itemDTO(String g_item_no, String gold_item_comment, double gold_item_transunit) {
+		this.g_item_no = g_item_no;
+		this.gold_item_comment = gold_item_comment;
+		this.gold_item_transunit = gold_item_transunit;
+	}
+
+
+
 	public String getG_item_no() {
 		return g_item_no;
 	}

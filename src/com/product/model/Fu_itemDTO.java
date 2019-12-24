@@ -18,6 +18,23 @@ public class Fu_itemDTO {
 	String fi_type_no;				// 펀드상품유형코드
 	String fund_item_comment;		// 상품설명
 	double fund_item_profitrate;	// 예상수익률
+	
+	public Fu_itemDTO() {
+	}
+	
+	
+	public Fu_itemDTO(String fu_item_no, String st_type_no, String r_rate_no, String fi_type_no,
+			String fund_item_comment, double fund_item_profitrate) {
+		this.fu_item_no = fu_item_no;
+		this.st_type_no = st_type_no;
+		this.r_rate_no = r_rate_no;
+		this.fi_type_no = fi_type_no;
+		this.fund_item_comment = fund_item_comment;
+		this.fund_item_profitrate = fund_item_profitrate;
+	}
+
+
+
 	public String getFu_item_no() {
 		return fu_item_no;
 	}

@@ -1,5 +1,6 @@
 package com.prodetail.model;
 
+import java.sql.Connection;
 import java.util.Date;
 
 public class Fos_detailDTO {
@@ -29,6 +30,29 @@ public class Fos_detailDTO {
 	String accident_content; // 사고내역
 	Date renewal_date; // 갱신일
 	String fos_comment; // 거래내용
+	
+	public Fos_detailDTO() {
+		// TODO Auto-generated constructor stub
+	}
+	
+	public Fos_detailDTO(String fos_detail_no, String foi_sign_no, String account_no, String l_bank_no,
+			String currency_no, double current_money, String endday_process, String accident_content, Date renewal_date,
+			String fos_comment) {
+		super();
+		this.fos_detail_no = fos_detail_no;
+		this.foi_sign_no = foi_sign_no;
+		this.account_no = account_no;
+		this.l_bank_no = l_bank_no;
+		this.currency_no = currency_no;
+		this.current_money = current_money;
+		this.endday_process = endday_process;
+		this.accident_content = accident_content;
+		this.renewal_date = renewal_date;
+		this.fos_comment = fos_comment;
+	}
+
+
+
 	public String getFos_detail_no() {
 		return fos_detail_no;
 	}
@@ -89,6 +113,7 @@ public class Fos_detailDTO {
 	public void setFos_comment(String fos_comment) {
 		this.fos_comment = fos_comment;
 	}
+	
 	
 
 }

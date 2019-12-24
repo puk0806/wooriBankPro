@@ -41,7 +41,6 @@ public class UserSearchService {
 			throw new RuntimeException(e);
 		}
 		
-		
 	}
 	
 

@@ -35,6 +35,30 @@ public class Ss_detailDTO {
 	int tax_incentive_price; // 세금우대적립목표금액
 	String tax_incentive_division; // 세금우대구분
 	String endday_process; // 만기시처리방법
+	
+	public Ss_detailDTO() {
+		// TODO Auto-generated constructor stub
+	}
+	
+	public Ss_detailDTO(String ss_detail_no, String si_sign_no, String account_no, String l_bank_no, String remarks_no,
+			int p_set_no, Date saving_sign_detail_enddate, int saving_sign_detail_delaytime, int contracted_price,
+			int reserve_price, int tax_incentive_price, String tax_incentive_division, String endday_process) {
+		super();
+		this.ss_detail_no = ss_detail_no;
+		this.si_sign_no = si_sign_no;
+		this.account_no = account_no;
+		this.l_bank_no = l_bank_no;
+		this.remarks_no = remarks_no;
+		this.p_set_no = p_set_no;
+		this.saving_sign_detail_enddate = saving_sign_detail_enddate;
+		this.saving_sign_detail_delaytime = saving_sign_detail_delaytime;
+		this.contracted_price = contracted_price;
+		this.reserve_price = reserve_price;
+		this.tax_incentive_price = tax_incentive_price;
+		this.tax_incentive_division = tax_incentive_division;
+		this.endday_process = endday_process;
+	}
+
 	public String getSs_detail_no() {
 		return ss_detail_no;
 	}

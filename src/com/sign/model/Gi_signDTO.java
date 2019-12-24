@@ -26,6 +26,28 @@ public class Gi_signDTO {
 	String ses_type_no; // SNS만기알림유형코드
 	String ea_type_no; // 이메일알림유형코드
 	String employee_no; // 직원코드
+	
+	public Gi_signDTO() {
+		// TODO Auto-generated constructor stub
+	}
+	
+	
+	public Gi_signDTO(String gi_sign_no, String u_info_no, String account_no, String g_item_no, String i_type_no,
+			String ps_type_no, String currency_no, String ses_type_no, String ea_type_no, String employee_no) {
+		this.gi_sign_no = gi_sign_no;
+		this.u_info_no = u_info_no;
+		this.account_no = account_no;
+		this.g_item_no = g_item_no;
+		this.i_type_no = i_type_no;
+		this.ps_type_no = ps_type_no;
+		this.currency_no = currency_no;
+		this.ses_type_no = ses_type_no;
+		this.ea_type_no = ea_type_no;
+		this.employee_no = employee_no;
+	}
+
+
+
 	public String getGi_sign_no() {
 		return gi_sign_no;
 	}
