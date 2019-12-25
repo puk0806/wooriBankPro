@@ -96,6 +96,28 @@ private static I_itemDAO i_itemDao = null;
 		
 		return list;
 	}
+
+	public void insertProduct(Connection conn, String i_company_no, String insurance_item_name,
+			String insurance_item_commnet, int insurance_item_length) {
+		String sql = "insert into i_item values('IT'||seq_i_item.nextval, ? , ? , ? , ? ) ";
+PreparedStatement pstmt = null;
+		
+		try {
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, i_company_no);
+			pstmt.setString(2, insurance_item_commnet);
+			pstmt.setString(3, insurance_item_name);
+			pstmt.setInt(4, insurance_item_length);
+
+			pstmt.executeUpdate();
+	
+		} catch (SQLException e) {
+			System.out.println("y_itemDAO isnertProduct예외");
+			e.printStackTrace();
+		}finally {
+			JdbcUtil.close(pstmt);
+		}
+	}
 	
 	
 

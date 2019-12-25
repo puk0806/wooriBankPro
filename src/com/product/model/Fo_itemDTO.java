@@ -11,6 +11,7 @@ public class Fo_itemDTO {
 	);
 	*/
 	String fo_item_no; 				// 외화상품코드
+	String foreign_item_name;		// 상품명
 	double foreign_item_sign_money; 	// 가입금액
 	String foreign_item_comment; 	// 상품설명
 	String foreign_item_endday; 	// 만기기간	
@@ -19,16 +20,25 @@ public class Fo_itemDTO {
 		// TODO Auto-generated constructor stub
 	}
 	
-	
-	
-	public Fo_itemDTO(String fo_item_no, double foreign_item_sign_money, String foreign_item_comment,
-			String foreign_item_endday) {
+
+	public Fo_itemDTO(String fo_item_no, String foreign_item_name, double foreign_item_sign_money,
+			String foreign_item_comment, String foreign_item_endday) {
+		super();
 		this.fo_item_no = fo_item_no;
+		this.foreign_item_name = foreign_item_name;
 		this.foreign_item_sign_money = foreign_item_sign_money;
 		this.foreign_item_comment = foreign_item_comment;
 		this.foreign_item_endday = foreign_item_endday;
 	}
 
+	
+	public String getForeign_item_name() {
+		return foreign_item_name;
+	}
+
+	public void setForeign_item_name(String foreign_item_name) {
+		this.foreign_item_name = foreign_item_name;
+	}
 
 
 	public String getFo_item_no() {

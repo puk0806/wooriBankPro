@@ -11,7 +11,7 @@
 <h3>/adminview/base/product/fu_itemBase</h3>
 <h4>펀드</h4>
 <a href="/bankJSPProject/product/fu_item.admin">상품 조회</a>
-<a href="#">상품 가입</a>
+<a href="/bankJSPProject/product/fu_itemRegister.admin">상품 가입</a>
 <a href="/bankJSPProject/product/fui_signSearch.admin">상품 가입확인(상세)</a>
 
 

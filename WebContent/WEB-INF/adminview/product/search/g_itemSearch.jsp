@@ -17,6 +17,7 @@
 	<c:forEach items="${g_itemList }" var="dto">
 		상품설명 : ${dto.gold_item_comment } <br>
 		거래단위 : ${dto.gold_item_transunit } <br>
+		상품명  : ${dto.g_item_name } <br>
 		<br>
 	</c:forEach>
 </c:if>

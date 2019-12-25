@@ -20,7 +20,7 @@ public class Y_itemDTO {
 	String yegeum_item_length; 		// 예금기간
 	int yegeum_item_limitmoney; 	// 가입제한금액
 	double yegeum_item_interestrate; 	// 금리
-	String styegeum_item_comment; 	// 상품설명
+	String yegeum_item_comment; 	// 상품설명
 	
 	public Y_itemDTO() {
 		// TODO Auto-generated constructor stub
@@ -28,14 +28,14 @@ public class Y_itemDTO {
 	
 	
 	public Y_itemDTO(String y_item_no, String yegeum_item_name, String yegeum_item_length, int yegeum_item_limitmoney,
-			double yegeum_item_interestrate, String styegeum_item_comment) {
+			double yegeum_item_interestrate, String yegeum_item_comment) {
 		super();
 		this.y_item_no = y_item_no;
 		this.yegeum_item_name = yegeum_item_name;
 		this.yegeum_item_length = yegeum_item_length;
 		this.yegeum_item_limitmoney = yegeum_item_limitmoney;
 		this.yegeum_item_interestrate = yegeum_item_interestrate;
-		this.styegeum_item_comment = styegeum_item_comment;
+		this.yegeum_item_comment = yegeum_item_comment;
 	}
 
 
@@ -75,13 +75,13 @@ public class Y_itemDTO {
 	}
 
 
-	public String getStyegeum_item_comment() {
-		return styegeum_item_comment;
+	public String getYegeum_item_comment() {
+		return yegeum_item_comment;
 	}
 
 
-	public void setStyegeum_item_comment(String styegeum_item_comment) {
-		this.styegeum_item_comment = styegeum_item_comment;
+	public void setYegeum_item_comment(String yegeum_item_comment) {
+		this.yegeum_item_comment = yegeum_item_comment;
 	}
 	
 	

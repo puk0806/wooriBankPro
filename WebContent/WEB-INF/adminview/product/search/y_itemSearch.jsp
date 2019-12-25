@@ -18,7 +18,7 @@
 		예금기간 : ${dto.yegeum_item_length } <br>
 		가입제한금액 : ${dto.yegeum_item_limitmoney } <br>
 		금리 : ${dto.yegeum_item_interestrate } <br>
-		상품설명 : ${dto.styegeum_item_comment } <br>
+		상품설명 : ${dto.yegeum_item_comment } <br>
 		<br>
 	</c:forEach>
 </c:if>

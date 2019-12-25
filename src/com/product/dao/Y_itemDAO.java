@@ -60,6 +60,7 @@ private static Y_itemDAO y_itemDao = null;
 		
 	}
 
+	// 상품 검색 함수
 	public List<Y_itemDTO> selectSearch(Connection conn, int searchCondition, String searchWord) {
 		String sql = "select * from y_item ";
 		
@@ -99,9 +100,38 @@ private static Y_itemDAO y_itemDao = null;
 			JdbcUtil.close(rs);
 			JdbcUtil.close(pstmt);
 		}
-		System.out.println("무사통과");
 		return list;
 	}
+
+	
+	// 상품 추가 함수
+	public void insertProduct(Connection conn, String yegeum_item_name, String yegeum_item_length,
+			int yegeum_item_limitmoney, double yegeum_item_interestrate, String yegeum_item_comment) {
+		
+		String sql = "insert into y_item values('YI'||seq_y_item.nextval, ? , ? , ? , ? , ? )";
+		PreparedStatement pstmt = null;
+		
+		try {
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, yegeum_item_name);
+			pstmt.setString(2, yegeum_item_length);
+			pstmt.setInt(3, yegeum_item_limitmoney);
+			pstmt.setDouble(4, yegeum_item_interestrate);
+			pstmt.setString(5, yegeum_item_comment);
+
+			pstmt.executeUpdate();
+	
+		} catch (SQLException e) {
+			System.out.println("y_itemDAO isnertProduct예외");
+			e.printStackTrace();
+		}finally {
+			JdbcUtil.close(pstmt);
+		}
+		
+
+		
+	}
+
 	
 	
 

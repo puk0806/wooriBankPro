@@ -16,12 +16,12 @@ public class S_itemDTO {
 	);
 	*/
 	
-	String s_item_no;; 				// 적금상품코드
-	String st_type_no;; 			// 가입대상코드
+	String s_item_no;		// 적금상품코드
+	String st_type_no; 			// 가입대상코드
 	String saving_item_name; 		// 상품명
 	int saving_item_maxmoney; 		// 가입최대금액
-	int saving_item_endrate; 		// 만기금리
-	int saving_item_cancelrate; 	// 중도해지금리
+	double saving_item_endrate; 		// 만기금리
+	double saving_item_cancelrate; 	// 중도해지금리
 	String savings_item_length; 	// 적금기간
 	String savings_item_comment; 	// 상품설명
 	
@@ -32,7 +32,7 @@ public class S_itemDTO {
 	public String getS_item_no() {
 		return s_item_no;
 	}public S_itemDTO(String s_item_no, String st_type_no, String saving_item_name, int saving_item_maxmoney,
-			int saving_item_endrate, int saving_item_cancelrate, String savings_item_length,
+			double saving_item_endrate, double saving_item_cancelrate, String savings_item_length,
 			String savings_item_comment) {
 		super();
 		this.s_item_no = s_item_no;
@@ -68,16 +68,16 @@ public class S_itemDTO {
 	public void setSaving_item_maxmoney(int saving_item_maxmoney) {
 		this.saving_item_maxmoney = saving_item_maxmoney;
 	}
-	public int getSaving_item_endrate() {
+	public double getSaving_item_endrate() {
 		return saving_item_endrate;
 	}
-	public void setSaving_item_endrate(int saving_item_endrate) {
+	public void setSaving_item_endrate(double saving_item_endrate) {
 		this.saving_item_endrate = saving_item_endrate;
 	}
-	public int getSaving_item_cancelrate() {
+	public double getSaving_item_cancelrate() {
 		return saving_item_cancelrate;
 	}
-	public void setSaving_item_cancelrate(int saving_item_cancelrate) {
+	public void setSaving_item_cancelrate(double saving_item_cancelrate) {
 		this.saving_item_cancelrate = saving_item_cancelrate;
 	}
 	public String getSavings_item_length() {

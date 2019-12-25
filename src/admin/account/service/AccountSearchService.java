@@ -39,11 +39,11 @@ public class AccountSearchService {
 		}
 	}
 
-	public List<AccountDTO> nameSearch(String user_name) {
+	public List<AccountDTO> nameSearch(String user_name,String user_rrn) {
 		AccountDAO dao = AccountDAO.getInstance();
 		
 		try(Connection conn = ConnectionProvider.getConnection()){
-			List<AccountDTO> list = dao.selectByUser_name(conn, user_name);
+			List<AccountDTO> list = dao.selectByUser_name(conn, user_name,user_rrn);
 			return list;
 		} catch (SQLException | NamingException e) {
 			System.out.println("SearchService nameSearch 예외 발생");

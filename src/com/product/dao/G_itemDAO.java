@@ -39,6 +39,7 @@ private static G_itemDAO g_itemDao = null;
 			rs = pstmt.executeQuery();
 			while(rs.next()) {
 				g_itemDto = new G_itemDTO(rs.getString("g_item_no")
+										,rs.getString("g_item_name")
 										,rs.getString("gold_item_comment")
 										,rs.getDouble("gold_item_transunit"));
 				
@@ -59,10 +60,10 @@ private static G_itemDAO g_itemDao = null;
 		String sql = "select * from g_item ";
 		switch (searchCondition) {
 		case 1 :	
-			sql+= " where regexp_like(yegeum_item_name, ? ,'i') ";
+			sql+= " where regexp_like(g_item_name, ? ,'i') ";
 			break;
 		case 2 :	
-			sql +=" where regexp_like(yegeum_item_comment, ? ,'i') ";
+			sql +=" where regexp_like(gold_item_comment, ? ,'i') ";
 			break;
 		}
 		PreparedStatement pstmt = null;
@@ -77,6 +78,7 @@ private static G_itemDAO g_itemDao = null;
 			rs = pstmt.executeQuery();
 			while(rs.next()) {
 				g_itemDto = new G_itemDTO(rs.getString("g_item_no")
+										,rs.getString("g_item_name")
 										,rs.getString("gold_item_comment")
 										,rs.getDouble("gold_item_transunit"));
 				
@@ -91,6 +93,28 @@ private static G_itemDAO g_itemDao = null;
 		}
 		
 		return list;
+	}
+
+	public void insertProduct(Connection conn, String g_item_name, String gold_item_comment,
+			Double gold_item_transunit) {
+		String sql = "insert into g_item values('GI'||seq_g_item.nextval, ? , ? , ? ) ";
+		
+PreparedStatement pstmt = null;
+		
+		try {
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, gold_item_comment);
+			pstmt.setDouble(2, gold_item_transunit);
+			pstmt.setString(3, g_item_name);
+
+			pstmt.executeUpdate();
+	
+		} catch (SQLException e) {
+			System.out.println("g_itemDAO isnertProduct예외");
+			e.printStackTrace();
+		}finally {
+			JdbcUtil.close(pstmt);
+		}
 	}
 	
 	

@@ -94,6 +94,29 @@ private static L_itemDAO l_itemDao = null;
 		
 		return list;
 	}
+
+	public void insertProduct(Connection conn, String li_type_no, String loan_item_comment, String loan_item_length,
+			int loan_item_limitmoney) {
+		String sql = "insert into l_item values('LI'||seq_l_item.nextval, ? , ? , ? , ? ) ";
+		PreparedStatement pstmt = null;
+		
+		try {
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, li_type_no);
+			pstmt.setString(2, loan_item_comment);
+			pstmt.setString(3, loan_item_length);
+			pstmt.setInt(4, loan_item_limitmoney);
+			pstmt.executeUpdate();
+	
+		} catch (SQLException e) {
+			System.out.println("y_itemDAO isnertProduct예외");
+			e.printStackTrace();
+		}finally {
+			JdbcUtil.close(pstmt);
+		}
+			
+		
+	}
 	
 	
 

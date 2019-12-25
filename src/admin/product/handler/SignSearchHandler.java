@@ -42,7 +42,6 @@ public class SignSearchHandler implements CommandHandler{
 		if (request.getMethod().equalsIgnoreCase("GET")) {	
 			return processForm(request, response,command);
 		} else if (request.getMethod().equalsIgnoreCase("POST")) {
-			System.out.println("POST입장");
 			return processSubmit(request, response,command);
 		}
 		return null;
@@ -80,7 +79,6 @@ public class SignSearchHandler implements CommandHandler{
 	private String processSubmit(HttpServletRequest request, HttpServletResponse response, String command) {
 		
 		ProductSignDetailSearchService service = new ProductSignDetailSearchService();
-		System.out.println("commad : "+command);
 		if(command.equals("foi_signSearch")) {
 			String foi_sign_no = trim(request.getParameter("foi_sign_no"));
 			Fos_detailDTO fos_signDetail = service.fos_signDetailSearch(foi_sign_no);

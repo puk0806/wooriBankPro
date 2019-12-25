@@ -11,7 +11,7 @@
 <h3>/adminview/base/product/l_itemBase</h3>
 <h4>대출</h4>
 <a href="/bankJSPProject/product/l_item.admin">상품 조회</a>
-<a href="#">상품 가입</a>
+<a href="/bankJSPProject/product/l_itemRegister.admin">상품 가입</a>
 <a href="/bankJSPProject/product/li_signSearch.admin">상품 가입확인(상세)</a>
 
 <script>

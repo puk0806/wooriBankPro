@@ -39,6 +39,7 @@ private static Fo_itemDAO fo_itemDao = null;
 			rs = pstmt.executeQuery();
 			while(rs.next()) {
 				fo_itemDto = new Fo_itemDTO(rs.getString("fo_item_no")
+						,rs.getString("foreign_item_name")
 						,rs.getDouble("foreign_item_sign_money")
 						,rs.getString("foreign_item_comment")
 						,rs.getString("foreign_item_endday"));
@@ -81,6 +82,7 @@ private static Fo_itemDAO fo_itemDao = null;
 			rs = pstmt.executeQuery();
 			while(rs.next()) {
 				fo_itemDto = new Fo_itemDTO(rs.getString("fo_item_no")
+						,rs.getString("foreign_item_name")
 						,rs.getDouble("foreign_item_sign_money")
 						,rs.getString("foreign_item_comment")
 						,rs.getString("foreign_item_endday"));
@@ -97,5 +99,30 @@ private static Fo_itemDAO fo_itemDao = null;
 		
 		return list;
 	}
+
+	public void insertProduct(Connection conn, String foreign_item_name, Double foreign_item_sign_money,
+			String foreign_item_comment, String foreign_item_endday) {
+
+		String sql = "insert into fo_item values('FI'||seq_fo_item.nextval,?,?,?,?) ";
+		PreparedStatement pstmt = null;
+		
+		try {
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setDouble(1, foreign_item_sign_money);
+			pstmt.setString(2, foreign_item_comment);
+			pstmt.setString(3, foreign_item_endday);
+			pstmt.setString(4, foreign_item_name);
+
+			pstmt.executeUpdate();
+	
+		} catch (SQLException e) {
+			System.out.println("fo_itemDAO isnertProduct예외");
+			e.printStackTrace();
+		}finally {
+			JdbcUtil.close(pstmt);
+		}
+	}
+
+	
 
 }

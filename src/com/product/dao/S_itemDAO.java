@@ -42,8 +42,8 @@ private static S_itemDAO s_itemDao = null;
 										,rs.getString("st_type_no")
 										,rs.getString("saving_item_name")
 										,rs.getInt("saving_item_maxmoney")
-										,rs.getInt("saving_item_endrate")
-										,rs.getInt("saving_item_cancelrate")
+										,rs.getDouble("saving_item_endrate")
+										,rs.getDouble("saving_item_cancelrate")
 										,rs.getString("savings_item_length")
 										,rs.getString("savings_item_comment"));
 				list.add(s_itemDto);
@@ -84,8 +84,8 @@ private static S_itemDAO s_itemDao = null;
 										,rs.getString("st_type_no")
 										,rs.getString("saving_item_name")
 										,rs.getInt("saving_item_maxmoney")
-										,rs.getInt("saving_item_endrate")
-										,rs.getInt("saving_item_cancelrate")
+										,rs.getDouble("saving_item_endrate")
+										,rs.getDouble("saving_item_cancelrate")
 										,rs.getString("savings_item_length")
 										,rs.getString("savings_item_comment"));
 				list.add(s_itemDto);
@@ -99,6 +99,31 @@ private static S_itemDAO s_itemDao = null;
 		}
 		
 		return list;
+	}
+
+	public void insertProduct(Connection conn, String st_type_no, String saving_item_name, int saving_item_maxmoney,
+			Double saving_item_endrate, Double saving_item_cancelrate, String savings_item_length,
+			String savings_item_comment) {
+		String sql = "insert into s_item values('SI'||seq_s_item.nextval, ? , ? , ? , ? , ? , ? , ? ) ";
+		PreparedStatement pstmt = null;
+		
+		try {
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, st_type_no);
+			pstmt.setString(2, saving_item_name);
+			pstmt.setInt(3, saving_item_maxmoney);
+			pstmt.setDouble(4,saving_item_endrate);
+			pstmt.setDouble(5, saving_item_cancelrate);
+			pstmt.setString(6, savings_item_length);
+			pstmt.setString(7, savings_item_comment);
+			pstmt.executeUpdate();
+	
+		} catch (SQLException e) {
+			System.out.println("s_itemDAO isnertProduct예외");
+			e.printStackTrace();
+		}finally {
+			JdbcUtil.close(pstmt);
+		}
 	}
 	
 	

@@ -59,13 +59,18 @@ public class SearchHandler implements CommandHandler{
 		
 		if(command.equals("/accountUserSearch")) {
 			String user_name = trim(request.getParameter("user_name"));
+			String user_rrn = trim(request.getParameter("user_rrn"));
 			if(user_name == null || user_name.isEmpty())
 				errors.put("user_name", true);
+			if(user_rrn == null || user_rrn.isEmpty())
+				errors.put("user_rrn", true);
+			
 			if (!errors.isEmpty()) {
 				System.out.println("에러발생");
 				return FORM_VIEW+command;
 			}
-			accountList = service.nameSearch(user_name);
+			
+			accountList = service.nameSearch(user_name,user_rrn);
 			request.setAttribute("accountList", accountList);
 			
 		}else if(command.equals("/accountNumberSearch")) {

@@ -62,10 +62,10 @@ private static Fu_itemDAO fu_itemDao = null;
 		String sql = "select * from fu_item ";
 		switch (searchCondition) {
 		case 1 :	// 수정 필요
-			sql+= " where regexp_like(yegeum_item_comment, ? ,'i') ";
+			sql+= " where regexp_like(fund_item_comment, ? ,'i') ";
 			break;
 		case 2 :	
-			sql +=" where regexp_like(yegeum_item_comment, ? ,'i') ";
+			sql +=" where regexp_like(fund_item_comment, ? ,'i') ";
 			break;
 		}
 		
@@ -98,7 +98,33 @@ private static Fu_itemDAO fu_itemDao = null;
 		}
 		
 		return list;
+	}
+
+	public void insertProduct(Connection conn, String st_type_no, String r_rate_no, String fi_type_no,
+			String fund_item_comment, Double fund_item_profitrate) {
+		String sql = "insert into fu_item values('FU'||seq_fu_item.nextval, ? , ? , ? , ? , ? ) ";
+		
+		PreparedStatement pstmt = null;
+		
+		try {
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, st_type_no);
+			pstmt.setString(2, r_rate_no);
+			pstmt.setString(3, fi_type_no);
+			pstmt.setString(4, fund_item_comment);
+			pstmt.setDouble(5, fund_item_profitrate);
+
+			pstmt.executeUpdate();
+	
+		} catch (SQLException e) {
+			System.out.println("fu_itemDAO isnertProduct예외");
+			e.printStackTrace();
+		}finally {
+			JdbcUtil.close(pstmt);
+		}
+
 	}	
+	
 }
 	
 	

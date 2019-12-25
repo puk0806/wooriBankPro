@@ -64,7 +64,7 @@ public class SearchHandler implements CommandHandler{
 			request.setAttribute("s_itemList", s_itemList);
 		}
 		
-		return FORM_VIEW+"/search/"+command+"Search";
+		return FORM_VIEW+"search/"+command+"Search";
 	}
 	
 	private String processSubmit(HttpServletRequest request, HttpServletResponse response, String command) {
@@ -100,9 +100,7 @@ public class SearchHandler implements CommandHandler{
 		}
 		
 		
-		
-		
-		return FORM_VIEW+"/search/"+command+"Search";
+		return FORM_VIEW+"search/"+command+"Search";
 	}
 
 

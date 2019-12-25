@@ -15,6 +15,9 @@
 	<p>
 		이름 :<br/><input type="text" name="user_name" value="박상만">
 	</p>
+	<p>
+		주민번호 :<br/><input type="text" name="user_rrn" value="9406111234567">
+	</p>
 	<input type="submit" value="검색">
 	</form>
 </div>

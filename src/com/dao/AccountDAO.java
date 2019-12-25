@@ -307,4 +307,48 @@ public class AccountDAO {
 			return  list;
 		}
 
+		public List<AccountDTO> selectByUser_name(Connection conn, String user_name, String user_rrn) {
+			String sql = "select * " + 
+					"from account " + 
+					"where u_info_no = " + 
+					"    (select u_info_no " + 
+					"    from u_info " + 
+					"    where user_name =  ? and user_rrn = ? ) ";
+		PreparedStatement pstmt = null;
+		ResultSet rs= null;
+		ArrayList<AccountDTO> list = new ArrayList<AccountDTO>();
+		
+		try {
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, user_name);
+			pstmt.setString(2, user_rrn);
+			rs = pstmt.executeQuery();
+			
+			AccountDTO accountDto = null;
+			while(rs.next()) {
+				accountDto = new AccountDTO(rs.getString("account_no")
+									, rs.getString("u_info_no")
+									, rs.getString("l_bank_no")
+									, rs.getString("a_type_no")
+									, rs.getString("a_state_no")
+									, rs.getString("currency_no")
+									, rs.getString("account_number")
+									, rs.getDate("account_create_date")
+									, rs.getString("account_yegeum_name")
+									, rs.getInt("account_limit")
+									, rs.getInt("account_pwd")
+									, rs.getString("account_nick"));
+				
+				list.add(accountDto);
+			}			
+		} catch (SQLException e) {
+			System.out.println("AccountDAO selectByUser_name 예외");
+			e.printStackTrace();
+		}finally {
+			JdbcUtil.close(rs);
+			JdbcUtil.close(pstmt);
+		}
+		return  list;
+		}
+
 }

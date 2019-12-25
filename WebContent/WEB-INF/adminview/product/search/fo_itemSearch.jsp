@@ -14,6 +14,7 @@
 </c:if>
 <c:if test="${not empty fo_itemList }">
 	<c:forEach items="${fo_itemList }" var="dto">
+		상품명 : ${dto.foreign_item_name } <br>
 		가입금액 : ${dto.foreign_item_sign_money } <br>
 		상품설명 : ${dto.foreign_item_comment } <br>
 		만기기간 : ${dto.foreign_item_endday } <br>
